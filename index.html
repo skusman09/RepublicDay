@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag</title>
-        <style>
+    <style>
+        
+   
         * {
             margin: 0;
             padding: 0;
@@ -427,8 +429,8 @@
                     transform: translate(0px, 100px) rotate(360deg);
                 }
             }
-        }
-            </style>
+                }
+    </style>
 </head>
 
 <body>
@@ -451,14 +453,23 @@
 
     <script>
         let currentAudio = null;
+        let currentAudioFile = '';
 
         function play(audioFile) {
-            if (currentAudio) {
+            if (currentAudio && currentAudioFile === audioFile) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
+                currentAudio = null;
+                currentAudioFile = '';
+            } else {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                }
+                currentAudio = new Audio(audioFile);
+                currentAudioFile = audioFile;
+                currentAudio.play();
             }
-            currentAudio = new Audio(audioFile);
-            currentAudio.play();
         }
     </script>
 </body>
