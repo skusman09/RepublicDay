@@ -7,46 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag</title>
     <style>
-        
-   
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             user-select: none;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
-            background: linear-gradient(orange, white, lime);
+            background: linear-gradient(45deg, orange, white, lime);
             background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
-            position: absolute;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            top: 50%;
-            bottom: 50%;
-            left: 50%;
-            right: 50%;
         }
 
         .flagbox {
-            position: absolute;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            top: 50%;
-            bottom: 50%;
-            left: 50%;
-            right: 50%;
+            margin-bottom: 2rem;
         }
 
         .flag {
-            position: relative;
-            display: grid;
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.118));
             animation: moving 5s alternate-reverse ease-in-out infinite;
@@ -55,12 +50,9 @@
         .orange,
         .white,
         .green {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 20rem;
-            width: 100rem;
+            height: 8rem;
+            width: 40rem;
+            margin: 0.2rem 0;
         }
 
         .orange {
@@ -74,50 +66,47 @@
 
         .green {
             background: green;
-            transform: rotate(180deg);
             animation: wavegreen 4s ease-in-out infinite;
         }
 
         .chakra {
             position: absolute;
-            height: 20rem;
-            width: 20rem;
+            height: 8rem;
+            width: 8rem;
             animation: rotate 3s linear infinite;
             cursor: pointer;
             border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
 
         .buttons {
-            position: absolute;
             display: flex;
             justify-content: center;
-            align-items: center;
-            bottom: 0rem;
+            margin-top: 2rem;
         }
 
-        .btn1,
-        .btn2,
-        .btn3,
-        .btn4 {
-            position: relative;
+        .buttons i {
             border-radius: 20px;
             border: none;
             outline: none;
             width: 8rem;
-            top: 20rem;
-            margin: 5px;
+            padding: 10px 20px;
+            margin: 0 10px;
             text-transform: capitalize;
             font-weight: bold;
             cursor: pointer;
-            background: -webkit-linear-gradient(rgb(255, 0, 25), rgb(63, 20, 205));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 5px 8px 10px darkgreen;
+            background: linear-gradient(90deg, rgb(255, 0, 25), rgb(63, 20, 205));
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .buttons i:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes rotate {
-
             0% {
                 transform: rotate(0deg);
             }
@@ -128,106 +117,35 @@
         }
 
         @keyframes waveorange {
-
             0%,
             100% {
                 clip-path: polygon(0 3%, 13% 0, 29% 3%, 52% 12%, 63% 14%, 75% 13%, 86% 11%, 100% 5%, 100% 100%, 0 100%);
                 box-shadow: inset 10px -10px 20px 10px rgb(255, 204, 0);
-                border-top-left-radius: 10%;
             }
 
             50% {
                 clip-path: polygon(0 10%, 16% 11%, 35% 12%, 51% 9%, 64% 6%, 76% 3%, 89% 6%, 100% 13%, 100% 100%, 0 100%);
                 box-shadow: inset -10px 10px 20px 10px rgb(255, 204, 0);
-                border-top-right-radius: 10%;
             }
         }
 
         @keyframes wavegreen {
-
             0%,
             100% {
                 clip-path: polygon(0 3%, 13% 0, 29% 3%, 52% 12%, 63% 14%, 75% 13%, 86% 11%, 100% 5%, 100% 100%, 0 100%);
                 box-shadow: inset 10px 10px 20px 10px limegreen;
-                border-top-left-radius: 10%;
             }
 
             50% {
                 clip-path: polygon(0 10%, 16% 11%, 35% 12%, 51% 9%, 64% 6%, 76% 3%, 89% 6%, 100% 13%, 100% 100%, 0 100%);
                 box-shadow: inset -10px 10px 20px 10px limegreen;
-                border-top-right-radius: 10%;
             }
-        }
-
-        @media screen and (max-width: 2000px) {
-
-            .container {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                top: 50%;
-                bottom: 50%;
-                left: 50%;
-                right: 50%;
-            }
-
-            .orange,
-            .white,
-            .green {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 8rem;
-                width: 40rem;
-            }
-
-            .chakra {
-                height: 8rem;
-                width: 8rem;
-                animation: rotate 4s linear infinite;
-                cursor: pointer;
-                border-radius: 50%;
-            }
-
-            .buttons {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .btn1,
-            .btn2,
-            .btn3,
-            .btn4 {
-                position: relative;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                width: 8rem;
-                top: 20rem;
-                margin: 5px;
-                text-transform: capitalize;
-                font-weight: bold;
-                background: -webkit-linear-gradient(orange, green);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 5px 8px 10px darkgreen;
-            }
-
         }
 
         @media screen and (max-width: 650px) {
-
             .orange,
             .white,
             .green {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 6rem;
                 width: 30rem;
             }
@@ -235,61 +153,19 @@
             .chakra {
                 height: 6rem;
                 width: 6rem;
-                animation: rotate 4s linear infinite;
-                cursor: pointer;
-                border-radius: 50%;
             }
 
-            .buttons {
-                position: absolute;
-                display: grid;
-                grid-template-columns: auto auto;
-                row-gap: 5px;
-                column-gap: 10px;
-                justify-content: center;
-                align-items: center;
+            .buttons i {
+                width: 6rem;
+                padding: 8px 16px;
+                margin: 0 5px;
             }
-
-            .btn1,
-            .btn2,
-            .btn3,
-            .btn4 {
-                position: relative;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                width: 8rem;
-                top: 20rem;
-                margin: 2px;
-                text-transform: capitalize;
-                font-weight: bold;
-                background: -webkit-linear-gradient(orange, green);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 5px 8px 10px darkgreen;
-            }
-
-            .btn1,
-            .btn3 {
-                grid-area: 1;
-            }
-
-            .btn2,
-            .btn4 {
-                grid-area: 2;
-            }
-
         }
 
         @media screen and (max-width: 500px) {
-
             .orange,
             .white,
             .green {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 4.5rem;
                 width: 20rem;
             }
@@ -297,50 +173,22 @@
             .chakra {
                 height: 4.4rem;
                 width: 4.4rem;
-                animation: rotate 4s linear infinite;
-                cursor: pointer;
-                border-radius: 50%;
             }
 
-            .btn1,
-            .btn2,
-            .btn3,
-            .btn4 {
-                position: relative;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                top: 22rem;
-                margin: 15px;
-                font-size: small;
-                text-transform: capitalize;
-                font-weight: bold;
-                background: -webkit-linear-gradient(orange, green);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 5px 8px 10px darkgreen;
+            .buttons {
+                flex-direction: column;
             }
 
-            .btn1,
-            .btn3 {
-                grid-area: 1;
-            }
-
-            .btn2,
-            .btn4 {
-                grid-area: 2;
+            .buttons i {
+                width: 100%;
+                margin: 5px 0;
             }
         }
 
         @media screen and (max-width: 350px) {
-
             .orange,
             .white,
             .green {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 3rem;
                 width: 14rem;
             }
@@ -348,88 +196,8 @@
             .chakra {
                 height: 3rem;
                 width: 3rem;
-                animation: rotate 4s linear infinite;
-                cursor: pointer;
-                border-radius: 50%;
             }
         }
-
-        @media screen and (max-width: 250px) {
-
-            .orange,
-            .white,
-            .green {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: fit-content;
-                width: fit-content;
-            }
-
-            .chakra {
-                height: 8rem;
-                width: 8rem;
-                animation: rotate 4s linear infinite;
-                cursor: pointer;
-                border-radius: 50%;
-                animation: movingchakra 4s ease-in-out infinite;
-            }
-
-            .buttons {
-                position: absolute;
-                display: flow-root;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .btn1,
-            .btn2,
-            .btn3,
-            .btn4 {
-                position: relative;
-                top: 23rem;
-                text-transform: capitalize;
-                font-weight: bold;
-                background: -webkit-linear-gradient(orange, green);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 5px 8px 10px darkgreen;
-                margin: 20px;
-            }
-
-            .btn1,
-            .btn3 {
-                grid-area: 1;
-            }
-
-            .btn2,
-            .btn4 {
-                grid-area: 2;
-                right: -2rem;
-            }
-
-
-            @keyframes movingchakra {
-
-                0%,
-                100% {
-                    transform: translate(0px, 0px) rotate(0deg);
-                }
-
-                30% {
-                    transform: translate(0px, -100px) rotate(360deg);
-                }
-
-                50% {
-                    transform: translate(0px, 0px) rotate(180deg);
-                }
-
-                75% {
-                    transform: translate(0px, 100px) rotate(360deg);
-                }
-            }
-                }
     </style>
 </head>
 
