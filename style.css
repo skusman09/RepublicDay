@@ -75,6 +75,7 @@ body {
   animation: rotate 3s linear infinite;
   cursor: pointer;
   border-radius: 50%;
+  box-shadow: 10px rgba(2);
 }
 
 .buttons {
