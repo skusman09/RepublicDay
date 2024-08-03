@@ -81,8 +81,8 @@ body {
   border: none;
   outline: none;
   width: 10rem; /* Medium width */
-  height: 40px; /* Medium height */
-  padding: 10px 20px; /* Medium padding */
+  height: 5px; /* Medium height */
+  padding: 10px 24px;
   margin: 10px; /* Medium margin */
   text-transform: capitalize;
   font-weight: bold;
