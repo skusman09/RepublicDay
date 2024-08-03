@@ -80,10 +80,9 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
-  width: 10rem; /* Medium width */
-  height: 5px; /* Medium height */
+  width: 10rem; 
+  height: 15px; 
   padding: 10px 24px;
-  margin: 10px; /* Medium margin */
   text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
