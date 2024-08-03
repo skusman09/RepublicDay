@@ -77,16 +77,16 @@ body {
 }
 
 .btn {
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   outline: none;
-  width: 10rem; 
-  height: 15px; 
-  padding: 10px 24px;
+  padding: 10px 20px; /* Adjust padding to fit text */
+  margin: 5px;
+  font-size: 16px; /* Adjust font size to fit text */
   text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(45deg, orange, lime);
+  background-color: #6c757d; /* Similar to the button background in the image */
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transition: background 0.3s, transform 0.3s;
