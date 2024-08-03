@@ -73,7 +73,7 @@ body {
   gap: 10px;
   position: absolute;
   bottom: 20px;
-  width: 80%; /* Adjust width as necessary */
+  width: 100%; /* Adjust width to span entire container */
 }
 
 .btn {
@@ -91,6 +91,7 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transition: background 0.3s, transform 0.3s;
 }
+
 
 .btn:hover {
   background-color: #5a6268; /* Darken background on hover */
