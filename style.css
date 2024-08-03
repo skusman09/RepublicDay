@@ -8,34 +8,44 @@
 body {
   background: linear-gradient(orange, white, lime);
   background-attachment: fixed;
-  height: 100vh;
 }
 
 .container {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px); /* Adjust the height to leave space for buttons */
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
 }
 
 .flagbox {
+  position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
 }
 
 .flag {
+  position: relative;
   display: grid;
   justify-content: center;
   align-items: center;
-  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.118));
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.118));
   animation: moving 5s alternate-reverse ease-in-out infinite;
 }
 
 .orange,
 .white,
 .green {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,56 +78,74 @@ body {
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
   position: absolute;
-  bottom: 20px;
-  width: 100%; /* Adjust width to span entire container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0rem;
 }
 
-.btn {
-  border-radius: 8px;
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+  position: relative;
+  border-radius: 20px;
   border: none;
   outline: none;
-  padding: 10px 20px; /* Adjust padding to fit text */
+  width: 8rem;
+  top: 20rem;
   margin: 5px;
-  font-size: 16px; /* Adjust font size to fit text */
   text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
-  background-color: #6c757d; /* Similar to the button background in the image */
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  transition: background 0.3s, transform 0.3s;
-}
-
-
-.btn:hover {
-  background-color: #5a6268; /* Darken background on hover */
-  transform: scale(1.05);
+  background: -webkit-linear-gradient(rgb(255, 0, 25), rgb(63, 20, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 5px 8px 10px darkgreen;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(180deg);
   }
 }
 
 @keyframes waveorange {
-  0%, 100% {
+  0%,
+  100% {
     clip-path: polygon(
-      0 3%, 13% 0, 29% 3%, 52% 12%, 63% 14%, 75% 13%, 86% 11%, 100% 5%, 100% 100%, 0 100%
+      0 3%,
+      13% 0,
+      29% 3%,
+      52% 12%,
+      63% 14%,
+      75% 13%,
+      86% 11%,
+      100% 5%,
+      100% 100%,
+      0 100%
     );
     box-shadow: inset 10px -10px 20px 10px rgb(255, 204, 0);
     border-top-left-radius: 10%;
   }
+
   50% {
     clip-path: polygon(
-      0 10%, 16% 11%, 35% 12%, 51% 9%, 64% 6%, 76% 3%, 89% 6%, 100% 13%, 100% 100%, 0 100%
+      0 10%,
+      16% 11%,
+      35% 12%,
+      51% 9%,
+      64% 6%,
+      76% 3%,
+      89% 6%,
+      100% 13%,
+      100% 100%,
+      0 100%
     );
     box-shadow: inset -10px 10px 20px 10px rgb(255, 204, 0);
     border-top-right-radius: 10%;
@@ -125,16 +153,36 @@ body {
 }
 
 @keyframes wavegreen {
-  0%, 100% {
+  0%,
+  100% {
     clip-path: polygon(
-      0 3%, 13% 0, 29% 3%, 52% 12%, 63% 14%, 75% 13%, 86% 11%, 100% 5%, 100% 100%, 0 100%
+      0 3%,
+      13% 0,
+      29% 3%,
+      52% 12%,
+      63% 14%,
+      75% 13%,
+      86% 11%,
+      100% 5%,
+      100% 100%,
+      0 100%
     );
     box-shadow: inset 10px 10px 20px 10px limegreen;
     border-top-left-radius: 10%;
   }
+
   50% {
     clip-path: polygon(
-      0 10%, 16% 11%, 35% 12%, 51% 9%, 64% 6%, 76% 3%, 89% 6%, 100% 13%, 100% 100%, 0 100%
+      0 10%,
+      16% 11%,
+      35% 12%,
+      51% 9%,
+      64% 6%,
+      76% 3%,
+      89% 6%,
+      100% 13%,
+      100% 100%,
+      0 100%
     );
     box-shadow: inset -10px 10px 20px 10px limegreen;
     border-top-right-radius: 10%;
@@ -142,10 +190,28 @@ body {
 }
 
 @media screen and (max-width: 2000px) {
-  .orange, .white, .green {
+  .container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+  }
+
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 8rem;
     width: 40rem;
   }
+
   .chakra {
     height: 8rem;
     width: 8rem;
@@ -153,13 +219,46 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
+
+  .buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 8rem;
+    top: 20rem;
+    margin: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
 }
 
 @media screen and (max-width: 650px) {
-  .orange, .white, .green {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 6rem;
     width: 30rem;
   }
+
   .chakra {
     height: 6rem;
     width: 6rem;
@@ -167,13 +266,59 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
+
+  .buttons {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 8rem;
+    top: 20rem;
+    margin: 2px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .orange, .white, .green {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4.5rem;
     width: 20rem;
   }
+
   .chakra {
     height: 4.4rem;
     width: 4.4rem;
@@ -181,19 +326,49 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
-  .btn {
-    width: 8rem; /* Adjust for smaller screens */
-    height: 35px; /* Adjust height for smaller screens */
-    padding: 8px 16px; /* Adjust padding for smaller screens */
-    margin: 8px; /* Adjust margin for smaller screens */
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    top: 22rem;
+    margin: 15px;
+    font-size: small;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
   }
 }
 
 @media screen and (max-width: 350px) {
-  .orange, .white, .green {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
     width: 14rem;
   }
+
   .chakra {
     height: 3rem;
     width: 3rem;
@@ -201,7 +376,78 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
-  .btn {
-    width: 7rem; /* Further adjust for very small screens */
+}
+
+@media screen and (max-width: 250px) {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .chakra {
+    height: 8rem;
+    width: 8rem;
+    animation: rotate 4s linear infinite;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: movingchakra 4s ease-in-out infinite;
+  }
+
+  .buttons {
+    position: absolute;
+    display: flow-root;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    top: 23rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+    margin: 20px;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+    right: -2rem;
+  }
+
+  @keyframes movingchakra {
+    0%,
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    30% {
+      transform: translate(0px, -100px) rotate(360deg);
+    }
+
+    50% {
+      transform: translate(0px, 0px) rotate(180deg);
+    }
+
+    75% {
+      transform: translate(0px, 100px) rotate(360deg);
+    }
   }
 }
