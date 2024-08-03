@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  font-size: xx-large;
+  font-size: large;
 }
 
 body {
@@ -249,7 +249,7 @@ body {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .orange,
   .white,
   .green {
@@ -309,6 +309,35 @@ body {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .orange,
+  .white,
+  .green {
+    height: 5rem;
+    width: 25rem;
+  }
+
+  .chakra {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .buttons {
+    grid-template-columns: auto;
+    row-gap: 30px;
+    column-gap: 5px;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    width: 6rem;
+    top: 15rem;
+    margin: 1px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .orange,
   .white,
@@ -337,9 +366,9 @@ body {
     border-radius: 20px;
     border: none;
     outline: none;
-    top: 22rem;
-    margin: 15px;
-    font-size: small;
+    top: 20rem;
+    margin: 5px;
+    font-size: 0.6cm;
     text-transform: capitalize;
     font-weight: bold;
     background: -webkit-linear-gradient(orange, green);
@@ -348,18 +377,31 @@ body {
     text-shadow: 5px 8px 10px darkgreen;
   }
 
+  .buttons {
+    grid-template-columns: auto;
+    row-gap: 30px;
+    column-gap: 5px;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    width: 6rem;
+    top: 20rem;
+  }
+
   .btn1,
   .btn3 {
     grid-area: 1;
   }
-
   .btn2,
   .btn4 {
     grid-area: 2;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .orange,
   .white,
   .green {
@@ -431,7 +473,7 @@ body {
   .btn2,
   .btn4 {
     grid-area: 2;
-    right: -2rem;
+    right: -1rem;
   }
 
   @keyframes movingchakra {
