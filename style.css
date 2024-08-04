@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   -webkit-box-reflect: below 10px
-    linear-gradient(transparent, rgba(0, 0, 0, 0.118));
+    linear-gradient(transparent, rgba(204, 22, 22, 0.118));
   animation: moving 5s alternate-reverse ease-in-out infinite;
 }
 
@@ -224,7 +224,10 @@ body {
 
   .buttons {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 5px;
+    column-gap: 10px;
     justify-content: center;
     align-items: center;
   }
@@ -237,15 +240,26 @@ body {
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 8rem;
+    width: 12rem;
     top: 20rem;
-    margin: 5px;
+    margin: 0.5rem;
+    font-size: 0.6cm;
     text-transform: capitalize;
     font-weight: bold;
-    background: -webkit-linear-gradient(orange, green);
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
   }
 }
 
@@ -287,12 +301,13 @@ body {
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 8rem;
+    width: 12rem;
     top: 20rem;
-    margin: 2px;
+    margin: 0.5rem;
+    font-size: 0.6cm;
     text-transform: capitalize;
     font-weight: bold;
-    background: -webkit-linear-gradient(orange, green);
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 8px 10px darkgreen;
@@ -321,24 +336,20 @@ body {
     height: 5rem;
     width: 5rem;
   }
-
-  .buttons {
-    grid-template-columns: auto;
-    row-gap: 30px;
-    column-gap: 5px;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    width: 6rem;
-    top: 15rem;
-    margin: 1px;
-  }
 }
 
 @media screen and (max-width: 500px) {
+  .container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+  }
+
   .orange,
   .white,
   .green {
@@ -357,43 +368,19 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    position: relative;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    top: 20rem;
-    margin: 5px;
-    font-size: 0.6cm;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: -webkit-linear-gradient(orange, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 8px 10px darkgreen;
-  }
-
-  .buttons {
-    grid-template-columns: auto;
-    row-gap: 1rem;
-    column-gap: 5px;
-  }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-  .btn2,
-  .btn4 {
-    grid-area: 2;
-  }
 }
 
 @media screen and (max-width: 400px) {
+  .container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+  }
   .orange,
   .white,
   .green {
@@ -449,12 +436,12 @@ body {
     position: relative;
     top: 23rem;
     text-transform: capitalize;
+    margin: 1rem;
     font-weight: bold;
-    background: -webkit-linear-gradient(orange, green);
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 8px 10px darkgreen;
-    margin: 20px;
   }
 
   .btn1,
