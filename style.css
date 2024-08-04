@@ -339,17 +339,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
-  }
-
   .orange,
   .white,
   .green {
@@ -357,8 +346,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4.5rem;
-    width: 20rem;
+    height: 4.3rem;
+    width: 22rem;
+    left: 0.1rem;
+    bottom: 2rem;
   }
 
   .chakra {
@@ -368,19 +359,50 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
-}
 
-@media screen and (max-width: 400px) {
-  .container {
+  .buttons {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 5px;
+    column-gap: 10px;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
   }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    left: 0.1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 12rem;
+    top: 19rem;
+    margin: 0.5rem;
+    font-size: 0.6cm;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+  }
+}
+
+@media screen and (max-width: 450px) {
   .orange,
   .white,
   .green {
@@ -388,16 +410,241 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
-    width: 14rem;
+    height: 4rem;
+    width: 21rem;
+    left: 0.5rem;
   }
 
   .chakra {
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     animation: rotate 4s linear infinite;
     cursor: pointer;
     border-radius: 50%;
+  }
+
+  .buttons {
+    position: absolute;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    border-radius: 20px;
+    left: 0.5rem;
+    border: none;
+    outline: none;
+    width: 12rem;
+    top: 21rem;
+    margin: 0.5rem;
+    font-size: 0.6cm;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 21rem;
+    left: 1rem;
+  }
+
+  .chakra {
+    height: 4rem;
+    width: 4rem;
+    animation: rotate 4s linear infinite;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .buttons {
+    position: absolute;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    left: 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 12rem;
+    top: 23rem;
+    margin: 0.5rem;
+    font-size: 0.6cm;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 20rem;
+    left: 1.8rem;
+    top: 0.5rem;
+  }
+
+  .chakra {
+    height: 3.7rem;
+    width: 3.7rem;
+    animation: rotate 4s linear infinite;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .buttons {
+    position: absolute;
+    display: grid;
+    column-gap: 0.1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    left: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 12rem;
+    top: 25rem;
+    margin: 0.5rem;
+    font-size: 0.6cm;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .orange,
+  .white,
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.9rem;
+    width: 19rem;
+    left: 1.7rem;
+  }
+
+  .chakra {
+    height: 3.8rem;
+    width: 3.8rem;
+    animation: rotate 4s linear infinite;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .buttons {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    position: relative;
+    left: 1.8rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 12rem;
+    top: 27rem;
+    margin: 0.5rem;
+    font-size: 0.6cm;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 8px 10px darkgreen;
+  }
+
+  .btn1,
+  .btn3 {
+    grid-area: 1;
+  }
+
+  .btn2,
+  .btn4 {
+    grid-area: 2;
   }
 }
 
