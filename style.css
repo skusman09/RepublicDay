@@ -90,9 +90,6 @@ body {
 .btn3,
 .btn4 {
   position: relative;
-  border-radius: 20px;
-  border: none;
-  outline: none;
   width: 8rem;
   top: 20rem;
   margin: 5px;
@@ -232,9 +229,6 @@ body {
   .btn3,
   .btn4 {
     position: relative;
-    border-radius: 20px;
-    border: none;
-    outline: none;
     width: 8rem;
     top: 20rem;
     text-transform: capitalize;
@@ -281,9 +275,6 @@ body {
   .btn3,
   .btn4 {
     position: relative;
-    border-radius: 20px;
-    border: none;
-    outline: none;
     width: 8rem;
     top: 20rem;
     text-transform: capitalize;
@@ -330,9 +321,6 @@ body {
   .btn3,
   .btn4 {
     position: relative;
-    border-radius: 20px;
-    border: none;
-    outline: none;
     top: 22rem;
     text-transform: capitalize;
     font-weight: bold;
