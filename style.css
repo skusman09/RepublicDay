@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  font-size: large;
 }
 
 body {
@@ -39,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   -webkit-box-reflect: below 10px
-    linear-gradient(transparent, rgba(204, 22, 22, 0.118));
+    linear-gradient(transparent, rgba(0, 0, 0, 0.118));
   animation: moving 5s alternate-reverse ease-in-out infinite;
 }
 
@@ -76,7 +75,6 @@ body {
   animation: rotate 3s linear infinite;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .buttons {
@@ -101,7 +99,7 @@ body {
   text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
-  background: -webkit-linear-gradient(rgb(255, 0, 25), rgb(63, 20, 205));
+  background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 5px 8px 10px darkgreen;
@@ -224,10 +222,7 @@ body {
 
   .buttons {
     position: absolute;
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 5px;
-    column-gap: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -240,10 +235,8 @@ body {
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 12rem;
+    width: 8rem;
     top: 20rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
     text-transform: capitalize;
     font-weight: bold;
     background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
@@ -251,19 +244,9 @@ body {
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 8px 10px darkgreen;
   }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-
-  .btn2,
-  .btn4 {
-    grid-area: 2;
-  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 650px) {
   .orange,
   .white,
   .green {
@@ -301,10 +284,8 @@ body {
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 12rem;
+    width: 8rem;
     top: 20rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
     text-transform: capitalize;
     font-weight: bold;
     background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
@@ -321,20 +302,6 @@ body {
   .btn2,
   .btn4 {
     grid-area: 2;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .orange,
-  .white,
-  .green {
-    height: 5rem;
-    width: 25rem;
-  }
-
-  .chakra {
-    height: 5rem;
-    width: 5rem;
   }
 }
 
@@ -346,10 +313,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4.3rem;
-    width: 22rem;
-    left: 0.1rem;
-    bottom: 2rem;
+    height: 4.5rem;
+    width: 20rem;
   }
 
   .chakra {
@@ -360,29 +325,15 @@ body {
     border-radius: 50%;
   }
 
-  .buttons {
-    position: absolute;
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 5px;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
   .btn1,
   .btn2,
   .btn3,
   .btn4 {
     position: relative;
-    left: 0.1rem;
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 12rem;
-    top: 19rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
+    top: 22rem;
     text-transform: capitalize;
     font-weight: bold;
     background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
@@ -402,7 +353,7 @@ body {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .orange,
   .white,
   .green {
@@ -410,241 +361,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
-    width: 21rem;
-    left: 0.5rem;
+    height: 3rem;
+    width: 14rem;
   }
 
   .chakra {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     animation: rotate 4s linear infinite;
     cursor: pointer;
     border-radius: 50%;
-  }
-
-  .buttons {
-    position: absolute;
-    display: grid;
-    row-gap: 5px;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    position: relative;
-    border-radius: 20px;
-    left: 0.5rem;
-    border: none;
-    outline: none;
-    width: 12rem;
-    top: 21rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 8px 10px darkgreen;
-  }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-
-  .btn2,
-  .btn4 {
-    grid-area: 2;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .orange,
-  .white,
-  .green {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 21rem;
-    left: 1rem;
-  }
-
-  .chakra {
-    height: 4rem;
-    width: 4rem;
-    animation: rotate 4s linear infinite;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .buttons {
-    position: absolute;
-    display: grid;
-    row-gap: 5px;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    position: relative;
-    left: 1rem;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    width: 12rem;
-    top: 23rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 8px 10px darkgreen;
-  }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-
-  .btn2,
-  .btn4 {
-    grid-area: 2;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .orange,
-  .white,
-  .green {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 20rem;
-    left: 1.8rem;
-    top: 0.5rem;
-  }
-
-  .chakra {
-    height: 3.7rem;
-    width: 3.7rem;
-    animation: rotate 4s linear infinite;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .buttons {
-    position: absolute;
-    display: grid;
-    column-gap: 0.1rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    position: relative;
-    left: 1.5rem;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    width: 12rem;
-    top: 25rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 8px 10px darkgreen;
-  }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-
-  .btn2,
-  .btn4 {
-    grid-area: 2;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .orange,
-  .white,
-  .green {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.9rem;
-    width: 19rem;
-    left: 1.7rem;
-  }
-
-  .chakra {
-    height: 3.8rem;
-    width: 3.8rem;
-    animation: rotate 4s linear infinite;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .buttons {
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4 {
-    position: relative;
-    left: 1.8rem;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    width: 12rem;
-    top: 27rem;
-    margin: 0.5rem;
-    font-size: 0.6cm;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 8px 10px darkgreen;
-  }
-
-  .btn1,
-  .btn3 {
-    grid-area: 1;
-  }
-
-  .btn2,
-  .btn4 {
-    grid-area: 2;
   }
 }
 
@@ -683,12 +409,12 @@ body {
     position: relative;
     top: 23rem;
     text-transform: capitalize;
-    margin: 1rem;
     font-weight: bold;
     background: -webkit-linear-gradient(rgb(68, 67, 66), rgb(47, 53, 47));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 8px 10px darkgreen;
+    margin: 20px;
   }
 
   .btn1,
@@ -699,7 +425,7 @@ body {
   .btn2,
   .btn4 {
     grid-area: 2;
-    right: -1rem;
+    right: -2rem;
   }
 
   @keyframes movingchakra {
