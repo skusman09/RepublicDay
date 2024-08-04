@@ -321,6 +321,7 @@ body {
   .btn3,
   .btn4 {
     position: relative;
+    width: 8rem;
     top: 22rem;
     text-transform: capitalize;
     font-weight: bold;
